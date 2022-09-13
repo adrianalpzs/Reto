@@ -24,6 +24,8 @@ export default function HomeScreen() {
                 {/* Header */}
                 <View className="flex-grow space-x-2 mx-4 mb-4">
                     <Text className='h-5'></Text>
+                    <Text className="font-bold text-2xl text-center text-white">RETO TITANIC</Text>
+                    <Text className='h-6'></Text>
                     <Text className="font-bold text-2xl text-white">Integrantes</Text>
                     <Text className='h-5'></Text>
 
@@ -39,6 +41,8 @@ export default function HomeScreen() {
                             <Image 
                                 source={ require('../assets/adriana.jpg') }
                                 className="h-[80px] w-[80px] bg-gray-300 p-4 rounded-full"/>
+                                <Text className="h-2"></Text>
+                            <Text className="text-gray-200 font-light w-13 text-center opacity-70">A01656937</Text>
                         </View>
                         
 
@@ -52,6 +56,8 @@ export default function HomeScreen() {
                             <Image 
                                 source={ require('../assets/paola.jpg') }
                                 className="h-[80px] w-[80px] bg-gray-300 p-4 rounded-full"/>
+                            <Text className="h-2"></Text>
+                            <Text className="text-gray-200 font-light w-13 text-center opacity-70">A01369117</Text>
                         </View>
 
 
@@ -64,6 +70,8 @@ export default function HomeScreen() {
                             <Image 
                                 source={ require('../assets/majo.jpeg') }
                                 className="h-[80px] w-[80px] bg-gray-300 p-4 rounded-full"/>
+                            <Text className="h-2"></Text>
+                            <Text className="text-gray-200 font-light w-13 text-center opacity-70">A01652137</Text>
                         </View>
 
                     </View>
