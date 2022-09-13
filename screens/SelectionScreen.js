@@ -1,7 +1,7 @@
 import { View, Text, ImageBackground } from 'react-native'
 import React from 'react'
 
-export default function Screen2() {
+export default function SelectionScreen() {
   return (
     <ImageBackground
     source={require('../assets/fondocc.jpg')}
@@ -9,7 +9,7 @@ export default function Screen2() {
     className='opacity-70'
     > 
     <View>
-      <Text>Screen2</Text>
+      <Text>SelectionScreen</Text>
     </View>
     </ImageBackground>
   )
