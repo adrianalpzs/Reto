@@ -1,7 +1,11 @@
-import { View, Text, ImageBackground, ScrollView, SafeAreaView, Image } from 'react-native'
+import { View, Text, ImageBackground, ScrollView, SafeAreaView, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { ArrowLeftIcon} from 'react-native-heroicons/solid';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Screen1() {
+  const navigation = useNavigation();
+
   return (
     <ImageBackground
             source={require('../assets/fondocc.jpg')}
@@ -9,16 +13,35 @@ export default function Screen1() {
             className='opacity-90'
             > 
     <SafeAreaView>
+      {/* Header */}
+    <View className="w-full p-5 border-b border-[#a2a2a2] opacity-70 shadow-xs">
+        <View>
+          <Text className="font-bold text-center text-4xl text-white">Algoritmo 1</Text>
+          <Text className="text-xl text-center font-light text-gray-300">Desition Tree</Text>
+        </View>
+        <TouchableOpacity 
+          onPress={navigation.goBack}
+          className="absolute top-9 left-5 p-2">
+          <ArrowLeftIcon size={20} color="gray" />
+        </TouchableOpacity>
+
+    </View>
+
+
       <ScrollView
         className="flex-1 px-2 py-4" 
         contentContainerStyle={{paddingBottom: 350}}
         >
+          
           <View className="flex-grow space-x-2 mx-4 mb-4">
-            <Text className='h-8'></Text>
+          <Text className='h-7'></Text>
+            {/*
+            <Text className='h-11'></Text>
             <Text className="font-bold text-4xl text-white">Algoritmo 1</Text>
             <Text className="h-2"></Text>
             <Text className="text-xl font-light text-gray-300">Desition Tree</Text>
             <Text className='h-5'></Text>
+            */}
             
             {/* Justificación */}
             <View className="flex-row items-center space-x-2 mx-4 mb-4">
