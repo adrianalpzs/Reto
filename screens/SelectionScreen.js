@@ -9,7 +9,7 @@ export default function SelectionScreen() {
     className='opacity-70'
     > 
     <View>
-      <Text>SelectionScreen</Text>
+      <Text className='text-white'>SelectionScreen</Text>
     </View>
     </ImageBackground>
   )

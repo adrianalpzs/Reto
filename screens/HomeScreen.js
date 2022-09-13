@@ -1,25 +1,28 @@
-import React from 'react'
+import React , {useRef} from 'react'
 import { SafeAreaView, View, Text, TouchableOpacity, Image, TextInput, ScrollView, ImageBackground} from 'react-native'
 import { ArrowLeftIcon, CheckCircleIcon, ClockIcon, PresentationChartLineIcon } from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen() {
     const navigation = useNavigation();
-
     
     return (
         <ImageBackground
             source={require('../assets/fondocc.jpg')}
             style={{width: '100%', height: '120%'}}
             > 
-        <ScrollView>
-            
-
-            
-            <SafeAreaView className="bg-blue">
+        
+        <SafeAreaView className="flex-grow">
+            <ScrollView 
+            className="flex-1 px-2 py-4" 
+            contentContainerStyle={{paddingBottom: 350}}
+            >
                 
+                
+
+
                 {/* Header */}
-                <View className="flex-column space-x-2 mx-4 mb-4">
+                <View className="flex-grow space-x-2 mx-4 mb-4">
                     <Text className='h-5'></Text>
                     <Text className="font-bold text-2xl text-white">Integrantes</Text>
                     <Text className='h-5'></Text>
@@ -73,7 +76,13 @@ export default function HomeScreen() {
 
                         <Text className="font-bold text-xl text-gray-700">Descripción del Problema</Text>
                         <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-600">Aquí va la descripción</Text>
+                            <Text className="text-gray-600">Aquí va la descripción
+                            Aquí va la descripción
+                            Aquí va la descripción
+                            Aquí va la descripción
+                            Aquí va la descripción
+                            Aquí va la descripción
+                            </Text>
                         </View>
                     
                     </View>
@@ -85,7 +94,25 @@ export default function HomeScreen() {
 
                     <Text className="font-bold text-xl text-gray-700">Importancia Problema</Text>
                         <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-700">Aquí va la importancia</Text>
+                            <Text className="text-gray-700">Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+                            Aquí va la importancia
+
+                            </Text>
                         </View>
                     
                     </View>
@@ -152,9 +179,10 @@ export default function HomeScreen() {
                     </View>
                 
                 </View>
-            </SafeAreaView>
-            
-        </ScrollView>
+            </ScrollView>
+        </SafeAreaView>
+        
+        
         </ImageBackground>
 
     )

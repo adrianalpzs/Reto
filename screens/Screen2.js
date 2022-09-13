@@ -9,7 +9,7 @@ export default function Screen2() {
     className='opacity-70'
     > 
     <View>
-      <Text>Screen2</Text>
+      <Text className='text-white'>Screen2</Text>
     </View>
     </ImageBackground>
   )
