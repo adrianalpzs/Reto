@@ -1,4 +1,4 @@
-import React , {useRef} from 'react'
+import React from 'react'
 import { SafeAreaView, View, Text, TouchableOpacity, Image, TextInput, ScrollView, ImageBackground} from 'react-native'
 import { CheckCircleIcon, ClockIcon, PresentationChartLineIcon } from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
