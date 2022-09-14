@@ -65,15 +65,17 @@ export default function Screen1() {
                 <Text className='h-8'></Text>
                 <Text className="font-bold text-3xl text-white">Resultados</Text>
                 <Text className="h-4"></Text>
+          
 
                 {/* Presición Obtenida */}
                 <View>
                   <Text className="text-xl font-semibold text-gray-300">Presición Obtenida</Text>
                   <Text className='h-3'></Text>
-                  <Image 
-                  source={ require('../assets/adriana.jpg') }
-                  className="h-[300px] w-[350px]"
-                  />
+
+                  <View className="flex-column flex-1 space-x-6 right-2 mx-2 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
+                    <Text className="font-bold text-xl left-2 text-gray-900">0.8395061728395061</Text>
+                  </View>
+
                 </View>
                 {/* Matriz de Confusión */}
                 <View>
@@ -81,8 +83,8 @@ export default function Screen1() {
                   <Text className="text-xl font-semibold text-gray-300">Matriz de Confusión</Text>
                   <Text className='h-3'></Text>
                   <Image 
-                  source={ require('../assets/adriana.jpg') }
-                  className="h-[300px] w-[350px]"
+                  source={ require('../assets/MC_RF.png') }
+                  className="h-[345px] w-[345px]"
                   />
                 </View>
 
@@ -92,8 +94,8 @@ export default function Screen1() {
                   <Text className="text-xl font-semibold text-gray-300">ROC</Text>
                   <Text className='h-3'></Text>
                   <Image 
-                  source={ require('../assets/adriana.jpg') }
-                  className="h-[300px] w-[350px]"
+                  source={ require('../assets/ROC_RF.png') }
+                  className="h-[250px] w-[345px]"
                   />
                 </View>
 
@@ -102,19 +104,22 @@ export default function Screen1() {
                   <Text className='h-10'></Text>
                   <Text className="text-xl font-semibold text-gray-300">AUC</Text>
                   <Text className='h-3'></Text>
-                  <Image 
-                  source={ require('../assets/adriana.jpg') }
-                  className="h-[300px] w-[350px]"
-                  />
+                  <View className="flex-column flex-1 space-x-6 p-2 right-2 mx-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
+                    <Text className="font-bold text-xl left-2 text-gray-900">0.82</Text>
+                  </View>
                 </View>
                 {/* Kaggle */}
                 <View>
                   <Text className='h-10'></Text>
                   <Text className="text-xl font-semibold text-gray-300">Puntaje Obtenido en Kaggle</Text>
-                  <Text className='h-3'></Text>
+                  <Text className='h-5'></Text>
+                  <View className="flex-column flex-1 space-x-6 right-2 mx-2 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
+                    <Text className="font-bold text-xl left-2 text-gray-900">0.77751</Text>
+                  </View>
+                  <Text className='h-5'></Text>
                   <Image 
-                  source={ require('../assets/adriana.jpg') }
-                  className="h-[300px] w-[350px]"
+                  source={ require('../assets/Kaggle_RF.png') }
+                  className="h-[170px] w-[345px]"
                   />
                 </View>
 

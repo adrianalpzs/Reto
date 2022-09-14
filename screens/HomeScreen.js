@@ -80,7 +80,7 @@ export default function HomeScreen() {
                 <View className="flex-row items-center space-x-2 mx-4 mb-4">
                     <View className="flex-column flex-1 space-x-2 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
 
-                        <Text className="font-bold text-xl text-gray-700">Descripción del Problema</Text>
+                        <Text className="font-bold p-1 text-xl text-gray-700">Descripción del Problema</Text>
                         <View className="flex-row items-center justify-between">
                             <Text className="text-gray-600">Aquí va la descripción
                             Aquí va la descripción
@@ -98,7 +98,7 @@ export default function HomeScreen() {
                 <View className="flex-row items-center space-x-2 mx-4 mb-4">
                     <View className="flex-column flex-1 space-x-2 space-y-3 p-2 bg-gray-100 opacity-60" style={{borderRadius: 20, }}>
 
-                    <Text className="font-bold text-xl text-gray-700">Importancia Problema</Text>
+                    <Text className="font-bold p-1 text-xl text-gray-700">Importancia Problema</Text>
                         <View className="flex-row items-center justify-between">
                             <Text className="text-gray-700">Aquí va la importancia
                             Aquí va la importancia

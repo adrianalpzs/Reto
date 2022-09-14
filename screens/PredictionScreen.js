@@ -132,7 +132,7 @@ export default function PredictionScreen() {
                 <View>  
                   <View className ='flex-column items-justify space-y-2 mx-3 mb-6 right-1'>
                     <Text className='h-5'></Text>
-
+                  {/* 
                   <SelectList 
                       
                       data={datalink} 
@@ -144,6 +144,7 @@ export default function PredictionScreen() {
                       placeholder='Model'
                       />
                       <Text className='h-3'></Text>
+                    */}
 
                   <SelectList 
                       value={values.class}
@@ -203,8 +204,18 @@ export default function PredictionScreen() {
                   </View>
                   <Button onPress={handleSubmit} title='Submit' color={'white'} />
 
-
-                  <Text className='text-xl text-white font-bold'>{prediction}</Text>
+                  {/* Resultados */}
+                <View>
+                  <Text className='h-20'></Text>
+                  <Text className="font-bold text-3xl text-white">Resultados</Text>
+                  <Text className="h-10"></Text>
+                  <View className=' bg-white rounded-2xl px-3 opacity-50'>
+                    <Text className='h-3'></Text>
+                    <Text className='text-xl text-center text-gray font-bold'>{prediction}</Text>
+                    <Text className='h-3'></Text>
+                  </View>
+                  </View>
+                  
                 </View>
               ) }
             </Formik> 
