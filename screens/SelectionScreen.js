@@ -18,6 +18,7 @@ export default function SelectionScreen() {
         <View>
           <Text className="font-bold text-center text-4xl text-white">Selection</Text>
           <Text className="text-xl text-center font-light text-gray-300">Algoritmo Seleccionado</Text>
+          <Text className="text-xs text-center font-light text-gray-300">Random Forest</Text>
         </View>
         <TouchableOpacity 
           onPress={navigation.goBack}
@@ -43,20 +44,27 @@ export default function SelectionScreen() {
 
                         <Text className="font-bold text-xl text-gray-900">Justificación</Text>
                         <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-900 text-justify right-1">Aquí va la justificación
-                            Aquí va la justificación
-                            Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
+                            <Text className="text-gray-900 text-justify right-1">Por temas de compatibilidad con anaconda, se optó
+                            por el modelo de regresión logística. Sin embargo, el modelo de Random Forest obtuvo mayor precisión, pero no es 
+                            una diferencia considerable comparada con este modelo.
+                            Su principal ventaja es que obtiene un mejor rendimiento de generalización para un rendimiento durante entrenamiento similar. Esta mejora en la generalización la consigue compensando los errores de las predicciones de los distintos árboles de decisión.
+
+
+
                             </Text>
+                            
                         </View>
+                        
+                        <Text className='h-0.5'></Text>
+                        
                     </View>
+                    
               </View>
+              <Text className='h-8'></Text>
+              <Image 
+                source={ require('../assets/trf.png') }
+                className="h-[260px] w-[345px]"
+               />
 
 
 

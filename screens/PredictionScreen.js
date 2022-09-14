@@ -14,7 +14,7 @@ export default function PredictionScreen() {
   const [prediction, setPrediction] = useState('')
   const [selected, setSelected] = useState('')
   const [sex,setSex] = useState('')
-  const [model,setModel] = useState('')
+  //const [model,setModel] = useState('')
 
   const data=[
     {key:'0', value:'0'},
@@ -56,7 +56,7 @@ export default function PredictionScreen() {
       {/* Header */}
     <View className="w-full p-5 border-b border-[#a2a2a2] opacity-70 shadow-xs">
         <View>
-          <Text className="font-bold text-center text-4xl text-white"> Prediction</Text>
+          <Text className="font-bold text-center text-3xl text-white">Logistic Regression Prediction</Text>
           <Text className="text-xl text-center font-light text-gray-300">Try A Prediction</Text>
         </View>
         <TouchableOpacity 
@@ -83,19 +83,14 @@ export default function PredictionScreen() {
 
                         <Text className="font-bold text-xl text-gray-900">Justificación</Text>
                         <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-900 text-justify right-1">Aquí va la justificación
-                            Aquí va la justificación
-                            Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
+                            <Text className="text-gray-900 text-justify right-1">Por temas de compatibilidad con anaconda, se optó
+                            por el modelo de regresión logística. Sin embargo, el modelo de Random Forest obtuvo mayor precisión, pero no es 
+                            una diferencia considerable comparada con este modelo.
                             </Text>
                         </View>
+                        <Text className='h-0.5'></Text>
                     </View>
+                    
               </View>
 
             {/* Formik */}
@@ -119,7 +114,7 @@ export default function PredictionScreen() {
                 axios.post('http://192.168.1.239:5000/predict',{
                   //Sex: values.Sex == 'Female'?0:1,
                   class: values.class,
-                  gender: values.gender == 'Female'?0:1,
+                  gender: values.gender,
                   age: values.age,
                   siblings: values.siblings,
                   parents: values.parents,

@@ -57,6 +57,11 @@ export default function Screen2() {
                               <Text className='h-2'></Text>
                               <Text className="text-gray-900 justify-between text-justify">La regresión logística se puede aplicar a un rango más amplio de situaciones de investigación que el análisis discriminante.</Text>
                             </View>
+                            <View>
+                              <Text className='h-2'></Text>
+                              <Text className="text-gray-900 justify-between text-justify">Logistic Regression es un modelo que nos permite dividir los datos en clases, lo cual resulta muy útil en este problema, pues tenemos que llegar a dos resultados: sobrevivió o no sobrevivió.</Text>
+                            </View>
+
                             </Text>
                         </View>
                         <Text className='h-0.5'></Text>
