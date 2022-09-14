@@ -17,7 +17,7 @@ export default function Screen1() {
     <View className="w-full p-5 border-b border-[#a2a2a2] opacity-70 shadow-xs">
         <View>
           <Text className="font-bold text-center text-4xl text-white">Algoritmo 1</Text>
-          <Text className="text-xl text-center font-light text-gray-300">Decision Tree</Text>
+          <Text className="text-xl text-center font-light text-gray-300">Random Forest</Text>
         </View>
         <TouchableOpacity 
           onPress={navigation.goBack}
@@ -45,22 +45,18 @@ export default function Screen1() {
             
             {/* Justificación */}
             <View className="flex-row items-center space-x-2 mx-4 mb-4">
-                    <View className="flex-column flex-1 space-x-2 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
+                    <View className="flex-column flex-1 space-x-6 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
 
-                        <Text className="font-bold text-xl text-gray-900">Justificación</Text>
+                        <Text className="font-bold text-xl left-2 text-gray-900">Justificación</Text>
                         <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-900 text-justify right-1">Aquí va la justificación
-                            Aquí va la justificación
-                            Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
+                            <Text className="text-gray-900 right-3 text-justify">Flexibilidad: dado que random forest puede realizar tareas de regresión y clasificación con un alto grado de precisión, también una herramienta eficaz para estimar los valores faltantes, ya que mantiene la precisión cuando falta una parte de los datos.
+                              Requieren poco ajuste, por lo cual es muy sencillo de usar “inmediatamente”
+                              No existe sobreajuste
+                              No se necesita una validación adicional debido a que ya esta incorporado.
+                              
                             </Text>
                         </View>
+                        <Text className='h-0.5'> </Text>
                     </View>
               </View>
 

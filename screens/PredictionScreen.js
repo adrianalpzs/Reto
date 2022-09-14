@@ -32,12 +32,12 @@ export default function PredictionScreen() {
 
   const datalink=[
     {key:'RF', value:'Random Forest'},
-    {key:'NN', value:'Neural Networks'},
+    {key:'LG', value:'Logistic Regression'},
   ]
 
   const linkdict = {
     'RF' : 'Random Forest',
-    'NN' : 'Neural Networks',
+    'LG' : 'Logistic Regression',
     '' : '(Select model required)'
   }
 
@@ -126,7 +126,7 @@ export default function PredictionScreen() {
                       data={datalink} 
                       setSelected={setModel}
                       boxStyles={{backgroundColor: 'rgba(255,255,255,0.5)'}}
-                      dropdownTextStyles={{color:'rgba(255,255,255,0.5)'}}
+                      dropdownTextStyles={{color:'rgba(255,255,255,0.9)'}}
                       boxTextSyles={{color:'red'}}
                       inputStyles={{color:'black'}}
                       placeholder='Choose model'
@@ -136,7 +136,7 @@ export default function PredictionScreen() {
                       data={data_sex} 
                       setSelected={setSex}
                       boxStyles={{backgroundColor: 'rgba(255,255,255,0.5)'}}
-                      dropdownTextStyles={{color:'rgba(255,255,255,0.5)'}}
+                      dropdownTextStyles={{color:'rgba(255,255,255,0.9)'}}
                       boxTextSyles={{color:'red'}}
                       inputStyles={{color:'black'}}
                       placeholder='Choose gender'
@@ -147,7 +147,7 @@ export default function PredictionScreen() {
                       data={data} 
                       setSelected={setSelected}
                       boxStyles={{backgroundColor: 'rgba(255,255,255,0.5)'}}
-                      dropdownTextStyles={{color:'rgba(255,255,255,0.5)'}}
+                      dropdownTextStyles={{color:'rgba(255,255,255,0.9)'}}
                       boxTextSyles={{color:'red'}}
                       inputStyles={{color:'black'}}
                       placeholder='Choose title'
@@ -162,8 +162,8 @@ export default function PredictionScreen() {
                       onBlur={handleBlur('Age')}
                       value = {values.Age}
                       placeholder = 'Age'
-                      placeholderTextColor={'black'}
-                      theme={{colors:{text:'#E381C7'}}}
+                      placeholderTextColor={'gray'}
+                      theme={{colors:{text:'black'}}}
                     />
                     <Text className='h-3'></Text>
                     <TextInput className='bg-white opacity-50 rounded-xl'
@@ -171,8 +171,8 @@ export default function PredictionScreen() {
                       onBlur={handleBlur('Fare')}
                       value = {values.Fare}
                       placeholder = 'Fare'
-                      placeholderTextColor={'black'}
-                      theme={{colors:{text:'#E381C7'}}}
+                      placeholderTextColor={'gray'}
+                      theme={{colors:{text:'black'}}}
                     />
                     <Text className='h-3'></Text>
                     <TextInput className='bg-white opacity-50 rounded-xl'
@@ -180,14 +180,14 @@ export default function PredictionScreen() {
                       onBlur={handleBlur('Relatives')}
                       value = {values.Relatives}
                       placeholder = 'Relatives'
-                      placeholderTextColor={'black'}
-                      theme={{colors:{text:'#E381C7'}}}
+                      placeholderTextColor={'gray'}
+                      theme={{colors:{text:'black'}}}
                     />
                   </View>
-                  <Button onPress={handleSubmit} title='Submit' color={'#AF00CC'}/>
+                  <Button onPress={handleSubmit} title='Submit' color={'white'} />
 
 
-                  <Text className='text-xl text-fuchsia-200'>{prediction}</Text>
+                  <Text className='text-xl text-white font-bold'>{prediction}</Text>
                 </View>
               ) }
             </Formik> 

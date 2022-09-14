@@ -17,7 +17,7 @@ export default function Screen2() {
       <View className="w-full p-5 border-b border-[#a2a2a2] opacity-70 shadow-xs">
         <View>
           <Text className="font-bold text-center text-4xl text-white">Algoritmo 2</Text>
-          <Text className="text-xl text-center font-light text-gray-300">Perceptron</Text>
+          <Text className="text-xl text-center font-light text-gray-300">Logistic Regression</Text>
         </View>
         <TouchableOpacity 
           onPress={navigation.goBack}
@@ -36,22 +36,30 @@ export default function Screen2() {
             
             {/* Justificación */}
             <View className="flex-row items-center space-x-2 mx-4 mb-4">
-                    <View className="flex-column flex-1 space-x-2 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
+                    <View className="flex-column flex-1 space-x-6 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
 
-                        <Text className="font-bold text-xl text-gray-900">Justificación</Text>
+                        <Text className="font-bold text-xl left-2 text-gray-900">Justificación</Text>
                         <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-900 text-justify right-1">Aquí va la justificación
-                            Aquí va la justificación
-                            Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
-                              Aquí va la justificación
+                            <Text className="text-gray-900 right-3 justify-between text-justify">La regresión logística nos puede resultar útil  
+                            <View>
+                            <Text className='h-1'></Text>
+                            <Text>para los casos:</Text>
+                            </View>
+                            <View>
+                              <Text className='h-3'></Text>
+                              <Text className="text-gray-900 justify-between text-justify">Cuando se desea predecir la presencia o ausencia de una característica o resultado según los valores de un conjunto de predictores. </Text>
+                            </View>
+                            <View>
+                              <Text className='h-2'></Text>
+                              <Text className="text-gray-900 justify-between text-justify">Los coeficientes de regresión logística pueden utilizarse para estimar la razón de probabilidad de cada variable independiente del modelo. </Text>
+                            </View>
+                            <View>
+                              <Text className='h-2'></Text>
+                              <Text className="text-gray-900 justify-between text-justify">La regresión logística se puede aplicar a un rango más amplio de situaciones de investigación que el análisis discriminante.</Text>
+                            </View>
                             </Text>
                         </View>
+                        <Text className='h-0.5'></Text>
                     </View>
               </View>
 
