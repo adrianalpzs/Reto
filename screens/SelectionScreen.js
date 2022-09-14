@@ -18,7 +18,7 @@ export default function SelectionScreen() {
         <View>
           <Text className="font-bold text-center text-4xl text-white">Selection</Text>
           <Text className="text-xl text-center font-light text-gray-300">Algoritmo Seleccionado</Text>
-          <Text className="text-xs text-center font-light text-gray-300">Random Forest</Text>
+          <Text className="text-xs text-center font-light text-gray-300">Logistic Regression</Text>
         </View>
         <TouchableOpacity 
           onPress={navigation.goBack}
@@ -62,8 +62,8 @@ export default function SelectionScreen() {
               </View>
               <Text className='h-8'></Text>
               <Image 
-                source={ require('../assets/trf.png') }
-                className="h-[260px] w-[345px]"
+                source={ require('../assets/LRimg.png') }
+                className="h-[330px] w-[345px]"
                />
 
 
