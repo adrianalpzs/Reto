@@ -1,6 +1,5 @@
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack"
-import { View } from "react-native-animatable";
 import {TailwindProvider} from "tailwindcss-react-native";
 import HomeScreen from './screens/HomeScreen';
 import PredictionScreen from "./screens/PredictionScreen";

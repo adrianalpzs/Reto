@@ -17,7 +17,7 @@ export default function Screen1() {
     <View className="w-full p-5 border-b border-[#a2a2a2] opacity-70 shadow-xs">
         <View>
           <Text className="font-bold text-center text-4xl text-white">Algoritmo 1</Text>
-          <Text className="text-xl text-center font-light text-gray-300">Desition Tree</Text>
+          <Text className="text-xl text-center font-light text-gray-300">Decision Tree</Text>
         </View>
         <TouchableOpacity 
           onPress={navigation.goBack}
