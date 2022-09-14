@@ -17,11 +17,10 @@ export default function PredictionScreen() {
   const [model,setModel] = useState('')
 
   const data=[
-    {key:'0', value:'Mr.'},
-    {key:'2', value:'Mrs.'},
-    {key:'1', value:'Miss'},
-    {key:'3', value:'Master'},
-    {key:'4', value:'VIP'},
+    {key:'0', value:'0'},
+    {key:'1', value:'1'},
+    {key:'2', value:'2'},
+    {key:'3', value:'3'},
   ]
 
   const data_sex=[
@@ -57,7 +56,7 @@ export default function PredictionScreen() {
       {/* Header */}
     <View className="w-full p-5 border-b border-[#a2a2a2] opacity-70 shadow-xs">
         <View>
-          <Text className="font-bold text-center text-4xl text-white">{/*linkdict[model]*/} Prediction</Text>
+          <Text className="font-bold text-center text-4xl text-white"> Prediction</Text>
           <Text className="text-xl text-center font-light text-gray-300">Try A Prediction</Text>
         </View>
         <TouchableOpacity 
@@ -101,88 +100,106 @@ export default function PredictionScreen() {
 
             {/* Formik */}
             <Formik initialValues = {{
-              Sex: '',
-              Title:'',
-              Age: '',
-              Fare: '',
-              Relatives: ''
+              class: '',
+              gender:'',
+              age: '',
+              siblings: '',
+              parents: ''
               }}
               //onSubmit={values => console.log(values)}
               onSubmit={values => 
-                axios.post('http://192.168.1.239:19000/predict'+model,{
-                  Sex: values.Sex,
-                  Title: values.Title,
-                  Age: values.Age,
-                  Fare: values.Fare,
-                  Relatives: values.Relatives,
-                }).then(response => {setPrediction(response.data)}).catch(error => {console.log(error.response.data)})}
+                {
+                console.log(values.class)
+                console.log(values.gender)
+                console.log(values.age)
+                console.log(values.siblings)
+                console.log(values.parents)
+                
+
+                axios.post('http://192.168.1.239:5000/predict',{
+                  //Sex: values.Sex == 'Female'?0:1,
+                  class: values.class,
+                  gender: values.gender == 'Female'?0:1,
+                  age: values.age,
+                  siblings: values.siblings,
+                  parents: values.parents,
+                
+              }).then(response => {setPrediction(response.data==0?'Not Survived': 'Survived')}).catch(error => {console.log(error.response.data)})}   }
 
             >
+              
               {({handleChange,handleBlur, handleSubmit, values})=> (
                 <View>  
                   <View className ='flex-column items-justify space-y-2 mx-3 mb-6 right-1'>
                     <Text className='h-5'></Text>
+
                   <SelectList 
+                      
                       data={datalink} 
                       setSelected={setModel}
                       boxStyles={{backgroundColor: 'rgba(255,255,255,0.5)'}}
                       dropdownTextStyles={{color:'rgba(255,255,255,0.9)'}}
-                      boxTextSyles={{color:'red'}}
+                      dropdownStyles={{backgroundColor:'rgba(255,255,255,0.2)'}}
                       inputStyles={{color:'black'}}
-                      placeholder='Choose model'
+                      placeholder='Model'
                       />
                       <Text className='h-3'></Text>
+
                   <SelectList 
-                      data={data_sex} 
-                      setSelected={setSex}
-                      boxStyles={{backgroundColor: 'rgba(255,255,255,0.5)'}}
-                      dropdownTextStyles={{color:'rgba(255,255,255,0.9)'}}
-                      boxTextSyles={{color:'red'}}
-                      inputStyles={{color:'black'}}
-                      placeholder='Choose gender'
-                      onSelect={()=>{values.Sex = sex}}
-                      />
-                      <Text className='h-3'></Text>
-                    <SelectList 
+                      value={values.class}
                       data={data} 
                       setSelected={setSelected}
                       boxStyles={{backgroundColor: 'rgba(255,255,255,0.5)'}}
                       dropdownTextStyles={{color:'rgba(255,255,255,0.9)'}}
-                      boxTextSyles={{color:'red'}}
+                      dropdownStyles={{backgroundColor:'rgba(255,255,255,0.2)'}}
                       inputStyles={{color:'black'}}
-                      placeholder='Choose title'
-                      onSelect={()=>{values.Title = selected}}
+                      placeholder='Class'
+                      onSelect={()=>{values.class = selected}}
+                      />
+                      <Text className='h-3'></Text>
+                    <SelectList 
+                      value={values.gender}
+                      data={data_sex} 
+                      setSelected={setSex}
+                      boxStyles={{backgroundColor: 'rgba(255,255,255,0.5)'}}
+                      dropdownTextStyles={{color:'rgba(255,255,255,0.9)'}}
+                      dropdownStyles={{backgroundColor:'rgba(255,255,255,0.2)'}}
+                      inputStyles={{color:'black'}}
+                      placeholder='Gender'
+                      onSelect={()=>{values.gender = sex}}
                       />
                   </View>
                   <Text className='h-4'></Text>
 
                   <View className='flex-column items-justify space-y-1 mx-3 mb-6 right-1'>
                     <TextInput className='bg-white opacity-50 rounded-xl'
-                      onChangeText = {handleChange('Age')}
-                      onBlur={handleBlur('Age')}
-                      value = {values.Age}
-                      placeholder = 'Age'
+                      onChangeText = {handleChange('age')}
+                      onBlur={handleBlur('age')}
+                      value = {values.age}
+                      placeholder = 'age'
                       placeholderTextColor={'gray'}
                       theme={{colors:{text:'black'}}}
                     />
                     <Text className='h-3'></Text>
                     <TextInput className='bg-white opacity-50 rounded-xl'
-                      onChangeText = {handleChange('Fare')}
-                      onBlur={handleBlur('Fare')}
-                      value = {values.Fare}
-                      placeholder = 'Fare'
+                      onChangeText = {handleChange('siblings')}
+                      onBlur={handleBlur('siblings')}
+                      value = {values.siblings}
+                      placeholder = 'siblings'
                       placeholderTextColor={'gray'}
                       theme={{colors:{text:'black'}}}
                     />
+                    
                     <Text className='h-3'></Text>
                     <TextInput className='bg-white opacity-50 rounded-xl'
-                      onChangeText = {handleChange('Relatives')}
-                      onBlur={handleBlur('Relatives')}
-                      value = {values.Relatives}
-                      placeholder = 'Relatives'
+                      onChangeText = {handleChange('parents')}
+                      onBlur={handleBlur('parents')}
+                      value = {values.parents}
+                      placeholder = 'parents'
                       placeholderTextColor={'gray'}
                       theme={{colors:{text:'black'}}}
                     />
+                    
                   </View>
                   <Button onPress={handleSubmit} title='Submit' color={'white'} />
 
