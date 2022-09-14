@@ -81,16 +81,15 @@ export default function HomeScreen() {
                     <View className="flex-column flex-1 space-x-2 p-2 space-y-3 bg-gray-100 opacity-60" style={{borderRadius: 20}}>
 
                         <Text className="font-bold p-1 text-xl text-gray-700">Descripción del Problema</Text>
-                        <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-600">Aquí va la descripción
-                            Aquí va la descripción
-                            Aquí va la descripción
-                            Aquí va la descripción
-                            Aquí va la descripción
-                            Aquí va la descripción
+                        <View className="flex-row left-3  items-center justify-between">
+                            <Text className="text-gray-700 right-4 text-justify">El Titanic es uno de los barcos más famosos que han existido nunca.
+Era de noche y la mayoría de los pasajeros dormía cuando, hace exactamente 110 años, un iceberg puso fin al primer viaje del barco de pasajeros más impresionante jamás construido. 
+Hoy en día, descansa en las aguas del Océano Atlántico.
+Actualmente con toda la tecnología que existe ha sido posible obtener información acerca de cuales pasajeros pudieron sobrevivir a este suceso y cuáles no.
+
                             </Text>
                         </View>
-                    
+                        <Text className='h-0.5'></Text>
                     </View>
                 </View>
                 <Text className='p-2'></Text>
@@ -99,28 +98,14 @@ export default function HomeScreen() {
                     <View className="flex-column flex-1 space-x-2 space-y-3 p-2 bg-gray-100 opacity-60" style={{borderRadius: 20, }}>
 
                     <Text className="font-bold p-1 text-xl text-gray-700">Importancia Problema</Text>
-                        <View className="flex-row items-center justify-between">
-                            <Text className="text-gray-700">Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
-                            Aquí va la importancia
+                        <View className="flex-row left-3 items-center justify-between">
+                            <Text className="text-gray-700 right-4 text-justify">Una de las razones por las que el naufragio llevó a la pérdida de la vida era que no había suficientes botes salvavidas para los pasajeros y la tripulación. Sin embargo, existió un elemento de “suerte” en sobrevivir al hundimiento: algunos grupos de personas tenían más probabilidades de sobrevivir que otras, como las mujeres, los niños y la clase alta.
+Gracias a todo el conocimiento adquirido estas cinco semanas pudimos ser capaces de desarrollar una solución poniendo en práctica los distintos algoritmos aprendidos.
+
 
                             </Text>
                         </View>
-                    
+                    <Text className='h-0.5'></Text>
                     </View>
                 </View>
 

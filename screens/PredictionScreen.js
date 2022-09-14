@@ -111,7 +111,7 @@ export default function PredictionScreen() {
                 console.log(values.parents)
                 
 
-                axios.post('http://192.168.1.239:5000/predict',{
+                axios.post('http://10.48.201.43:5000/predict',{
                   //Sex: values.Sex == 'Female'?0:1,
                   class: values.class,
                   gender: values.gender,
